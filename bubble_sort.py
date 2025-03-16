@@ -8,7 +8,12 @@ def bubble(n):
                 n[i], n[i + 1] = n[i+1], n[i]
     return n
 
+for i in range(len(unsorted)):
+    for j in range(len(unsorted) - i - 1):
+        if unsorted[j] > unsorted[j + 1]:
+            unsorted[j], unsorted[j + 1] = unsorted[j + 1], unsorted[j]
 
+<<<<<<< HEAD
 unsorted = [5,4,3,2,1]
 
 print(bubble(unsorted))
@@ -29,3 +34,6 @@ If the first element in the pair (n[i]) is greater than the second (n[i+1]), the
 
 Return: Once the list is sorted, it exits the loop and returns the sorted list.
 """
+=======
+print(unsorted)
+>>>>>>> bfb9909b491134605059af9c55b446addb942a50
