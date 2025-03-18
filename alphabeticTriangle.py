@@ -10,4 +10,3 @@ for i in range(len(values)):
         print(values[j], end=" ")
     # Move to the next line after completing each row
     print()
-
