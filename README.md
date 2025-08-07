@@ -37,7 +37,7 @@ Installation
 Clone this repository:
 
 bash
-git clone https://github.com/yourusername/mastering-loops.git
+git clone https://github.com/Vigilante120/Python_Patterns.git
 Navigate to the project directory:
 
 bash
