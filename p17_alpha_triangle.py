@@ -1,15 +1,14 @@
-rows = 4
-space = 4
-s = "ABC"
+rows = 5
 for i in range(rows):
-    for j in range(space - i): # spaces
-        print(" ", end="")
+    # Part 1: Spaces
+    print(" " * (rows - i - 1), end="")
 
-    for j in range(i): # values
-        print("#", end="")
+    # Part 2: Left Half (A, AB, ABC...)
+    for k in range(i + 1):
+        print(chr(ord('A') + k), end="")
 
-    for j in range(i, 1, -1): # values #2
-        print(s[j], end="")
+    # Part 3: Right Half (mirror)
+    for k in range(i - 1, -1, -1):
+        print(chr(ord('A') + k), end="")
 
     print()
-
