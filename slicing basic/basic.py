@@ -60,4 +60,9 @@ print(word[-8:-2:2]) # CEG
 print(word[2:99])
 
 
+arr = [1,2,3,4,5]
+print(len(arr))
+for i in range(len(arr)):
+    print(i)
+
 

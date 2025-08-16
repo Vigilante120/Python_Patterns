@@ -45,3 +45,10 @@ def print18(n):
         print()
 
 print18(5)
+
+# printing till a-z
+print(ord('a'))
+
+for i in range(ord('a'), ord('z') + 1):
+    print(chr(i), end=" ")
+
