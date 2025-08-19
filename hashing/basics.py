@@ -1,11 +1,16 @@
-arr = [1, 4, 6, 3, 4, 4, 2]
-hash_table = {}
+# Creating a dictionary
+phonebook = {
+    "Alice": "123-4567",
+    "Bob": "987-6543",
+    "Charlie": "555-1234"
+}
 
-# Precompute counts
-for num in arr:
-    if num in hash_table:
-        hash_table[num] += 1
-    else:
-        hash_table[num] = 1
+# Accessing a value by key
+print(phonebook["Bob"])  # Output: 987-6543
 
-print(hash_table)
+# Adding a new key-value pair
+phonebook["David"] = "111-2222"
+
+# Checking if a key exists
+if "Alice" in phonebook:
+    print("Alice's number is", phonebook["Alice"])
