@@ -1,6 +1,3 @@
-from math import trunc
-
-from patterns.while_loops import index
 
 
 class Node:
@@ -118,6 +115,31 @@ class LinkedList:
         self.length += 1
         return True
 
+    def remove(self, index):
+        if index < 0 or index >= self.length:
+            return None
+        if index == 0:
+            return self.pop_first()
+
+        if index == self.length - 1:
+            return self.pop()
+        prev = self.get(index -1)
+        temp = prev.next
+        prev.next = temp.next
+        temp.next = None
+        self.length -= 1
+        return temp
+
+    def reverse(self):
+        temp = self.head
+        self.head = self.tail
+        self.tail = temp
+        before = None
+        for _ in range(self.length):
+            after = temp.next
+            temp.next = before
+            before = temp
+            temp = after
 
 
 
@@ -129,5 +151,6 @@ my_linked_list.prepend(10)
 my_linked_list.set_value(1, 11)
 my_linked_list.insert(2, 12)
 my_linked_list.pop()
+my_linked_list.reverse()
 my_linked_list.print_list()
 
