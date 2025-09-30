@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "Alice",
+        "grades": [
+            85,
+            92,
+            78
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Bob",
+        "grades": [
+            91,
+            87,
+            93
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Charlie",
+        "grades": [
+            76,
+            81,
+            85
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Nishant",
+        "grades": [
+            75,
+            85,
+            95
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Mehul",
+        "grades": [
+            75,
+            89,
+            99
+        ]
+    }
+]

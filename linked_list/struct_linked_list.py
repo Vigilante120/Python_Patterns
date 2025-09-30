@@ -135,6 +135,10 @@ class LinkedList:
         self.head = self.tail
         self.tail = temp
         before = None
+        # while reversing think of three nodes going back
+        # before <- temp <- after
+        # they all are pointing back to the list to make a connection
+        # so the nodes don't break and the list also reverses
         for _ in range(self.length):
             after = temp.next
             temp.next = before
