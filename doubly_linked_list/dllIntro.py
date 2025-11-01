@@ -19,7 +19,7 @@ class DoublyLinkedList:
     def print_list(self):
         temp = self.head
         while temp:
-            print(temp.value)
+            print(temp.value, end=' ')
             temp = temp.next
     
     def append(self, value):
@@ -33,7 +33,30 @@ class DoublyLinkedList:
             self.tail = new_node
         self.length += 1
         return True
+    
+    def pop(self):
+        if self.length == 0:
+            return None
+        
+        temp = self.tail
+        
+        if self.length == 1:
+            self.head = None
+            self.tail = None
+        else:
+            self.tail = self.tail.prev
+            self.tail.next = None
+            temp.prev = None
+        self.length -= 1
+        return temp
+
+
 
 my_dll = DoublyLinkedList(7)
 my_dll.append(20)
+my_dll.append(30)
+my_dll.append(40)
+my_dll.print_list()
+print()
+my_dll.pop()
 my_dll.print_list()
