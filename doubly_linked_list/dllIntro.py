@@ -79,12 +79,58 @@ class DoublyLinkedList:
             temp.next = None
         self.length -= 1 
         return temp
+    # get the value from the index iguess
+    def get(self, index):
+        if index < 0 or index >= self.length:
+            return None
+        temp = self.head
+        if index < self.length/2:
+            for _ in range(index):
+                temp = temp.next
+        else:
+            temp = self.tail
+            for _ in range(self.length - 1, index, -1):
+                temp = temp.prev
+        return temp.value
+    
+    # set method to change the val of the node at that index
+    def set_value(self, index, value):
+        temp = self.get(index) # calling the get function
+        if temp: # applying simple logic here
+            temp.value = value
+            return True
+        return False
+    
+    def insert(self, index, value):
+        if index < 0 or index >= self.length:
+            return False
+        
+        if index == 0:
+            return self.prepend(value)
+        
+        if index == self.length:
+            return self.append(value)
+        
+        new_node = Node(value)
+        before = self.get(index - 1)
+        after = before.next
+        
+        new_node.prev = before
+        new_node.next = after
+        before.next = new_node
+        after.prev = new_node
+
+        self.length += 1
+        return True
         
         
 
 
 
+my_dll = DoublyLinkedList(0)
+my_dll.append(10)
+my_dll.append(20)
+my_dll.append(30)
 
-my_dll = DoublyLinkedList(7)
-my_dll.pop_first()
-my_dll.print_list()
+print(my_dll.get(2))
+
