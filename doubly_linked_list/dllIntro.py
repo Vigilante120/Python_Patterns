@@ -91,7 +91,7 @@ class DoublyLinkedList:
             temp = self.tail
             for _ in range(self.length - 1, index, -1):
                 temp = temp.prev
-        return temp.value
+        return temp
     
     # set method to change the val of the node at that index
     def set_value(self, index, value):
@@ -102,7 +102,7 @@ class DoublyLinkedList:
         return False
     
     def insert(self, index, value):
-        if index < 0 or index >= self.length:
+        if index < 0 or index > self.length:
             return False
         
         if index == 0:
@@ -118,12 +118,37 @@ class DoublyLinkedList:
         new_node.prev = before
         new_node.next = after
         before.next = new_node
-        after.prev = new_node
+        if after:
+            after.prev = new_node
 
         self.length += 1
         return True
         
+    def remove(self, index):
+        if index < 0 or index >= self.length:
+            return None
+        if index == 0:
+            return self.pop_first()
+        if index == self.length - 1:
+            return self.pop()
         
+        temp = self.get(index) # This will now get the correct Node
+        
+        if temp:
+            prev_node = temp.prev
+            next_node = temp.next
+            
+            if prev_node:
+                prev_node.next = next_node
+            if next_node:
+                next_node.prev = prev_node
+
+            temp.next = None
+            temp.prev = None
+            
+            self.length -= 1
+            return temp
+        return None
 
 
 
@@ -131,6 +156,10 @@ my_dll = DoublyLinkedList(0)
 my_dll.append(10)
 my_dll.append(20)
 my_dll.append(30)
+my_dll.append(40)
 
-print(my_dll.get(2))
+my_dll.print_list()
+print()
+my_dll.remove(1)
 
+my_dll.print_list()
