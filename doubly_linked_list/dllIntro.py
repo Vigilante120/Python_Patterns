@@ -150,7 +150,20 @@ class DoublyLinkedList:
             return temp
         return None
 
-
+    def reverse(self):
+        current = self.head
+        self.tail = self.head 
+        while current:
+            temp = current.prev
+            current.prev = current.next
+            current.next = temp
+            
+            if current.prev:
+                current = current.prev
+                
+            else:
+                self.head = current
+                break
 
 my_dll = DoublyLinkedList(0)
 my_dll.append(10)
@@ -158,8 +171,5 @@ my_dll.append(20)
 my_dll.append(30)
 my_dll.append(40)
 
-my_dll.print_list()
-print()
-my_dll.remove(1)
-
+my_dll.reverse()
 my_dll.print_list()
