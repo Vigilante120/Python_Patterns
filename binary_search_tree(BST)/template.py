@@ -6,6 +6,7 @@ class Node:
         self.left = None
         self.right = None
 
+
 class BinarySearchTree:
     def __init__(self):
         self.root = None # BST FIRST u dont add the root value at the time u create the class instead we will use insert function to initialize the code
