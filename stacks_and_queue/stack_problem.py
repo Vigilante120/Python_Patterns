@@ -8,3 +8,4 @@ class Stack:
         new_node = Node(value)
         self.top = new_node 
         self.height = 1
+        
