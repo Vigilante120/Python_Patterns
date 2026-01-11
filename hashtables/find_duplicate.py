@@ -1,4 +1,4 @@
-
+# this code find duplicates inside the code
 def find_duplicates(nums):
     counts = {}
     for num in nums:
@@ -9,6 +9,8 @@ def find_duplicates(nums):
         if count > 1:
             duplicates.append(num)
     return duplicates
+
+
     
 
 print ( find_duplicates([1, 2, 3, 4, 5]) )
