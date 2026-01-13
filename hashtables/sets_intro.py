@@ -5,7 +5,7 @@ Like dictionaries, they are implemented using a hash table (which is why we are 
 
 Sets can only contain unique elements (meaning that duplicates are not allowed). 
 
-hey are useful for various operations such as finding the distinct elements in a collection and performing set operations such as union and intersection.
+they are useful for various operations such as finding the distinct elements in a collection and performing set operations such as union and intersection.
 
 They are defined by either using curly braces {} or the built-in set() function like this:
 
@@ -148,3 +148,18 @@ difference_set = my_set.difference(other_set)
 # Checking if an element is in a set
 if 1 in my_set:
     print("Found hello in my_set")
+
+
+# union example 
+
+numbers = [1,1,2,3,4]
+first = set(numbers)
+second = {1, 5}
+
+print(first | second) # union 
+print(first & second) # finds the common [Intersection = Common]
+print(first - second) # difference, numbers that are different in both lists
+
+if 1 in first:
+    print('yes 1 is present') # in short SETS IS AN UNORDERED COLLECTION OF UNIQUE ELEMENTS 
+    
