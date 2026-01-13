@@ -146,5 +146,5 @@ intersection_set = my_set.intersection(other_set)
 difference_set = my_set.difference(other_set)
  
 # Checking if an element is in a set
-if "hello" in my_set:
+if 1 in my_set:
     print("Found hello in my_set")
