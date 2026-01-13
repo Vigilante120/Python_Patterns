@@ -142,7 +142,7 @@ union_set = my_set.union(other_set)
 # Intersection of two sets
 intersection_set = my_set.intersection(other_set)
  
-# Differencehttps://www.w3schools.com/python/python_sets.asp between two sets
+# Difference https://www.w3schools.com/python/python_sets.asp between two sets
 difference_set = my_set.difference(other_set)
  
 # Checking if an element is in a set
