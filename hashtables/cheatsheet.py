@@ -55,3 +55,13 @@ squares = {x: x**2 for x in range(5)} # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
 # Insert   | O(1)         | O(n)
 # Lookup   | O(1)         | -
 # Delete   | O(1)         | -
+
+# Frequency map 
+
+votes = ["Alice", "Bob", "Alice", "Charlie", "Alice", "Bob"]
+
+count = {}
+for name in votes:
+    count[name] = count.get(name, 0) + 1
+
+print(count)
