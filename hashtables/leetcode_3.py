@@ -12,3 +12,7 @@ class Solution(object):
             res = max(res, right - left + 1)
 
         return res
+    
+
+
+# res is result dnd
