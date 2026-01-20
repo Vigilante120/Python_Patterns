@@ -163,3 +163,4 @@ print(first - second) # difference, numbers that are different in both lists
 if 1 in first:
     print('yes 1 is present') # in short SETS IS AN UNORDERED COLLECTION OF UNIQUE ELEMENTS 
     
+# keeping the streak alive sorry
