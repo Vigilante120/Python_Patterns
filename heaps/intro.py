@@ -77,3 +77,25 @@ class MaxHeap:
         when elements need to be rearranged.
         """
         self.heap[index1], self.heap[index2] = self.heap[index2], self.heap[index1]
+    
+    def _insert(self, value):
+        self.heap.append(value)
+        current = len(self.heap) - 1
+
+        while current > 0 and self.heap[current] > self.heap[self._parent(current)]:
+            self._swap(current, self._parent(current))
+            current = self._parent(current)
+
+myheap = MaxHeap()
+myheap._insert(99)
+myheap._insert(72)
+myheap._insert(61)
+myheap._insert(58)
+
+print(myheap.heap)
+
+myheap._insert(100)
+print(myheap.heap)
+
+myheap._insert(75)
+print(myheap.heap)
