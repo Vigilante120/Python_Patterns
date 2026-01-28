@@ -120,13 +120,6 @@ class MaxHeap:
 
         return max_value
     
-    
-
-    
-
-        
-
-
 
 myheap = MaxHeap()
 myheap._insert(99)
