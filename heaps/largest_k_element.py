@@ -53,3 +53,6 @@ class KthLargest(object):
 # obj.add(3)  # Returns 4 (3rd largest among [4, 5, 8, 2, 3])
 # obj.add(5)  # Returns 5 (3rd largest among [4, 5, 8, 2, 3, 5])
 # obj.add(10) # Returns 5 (3rd largest among [4, 5, 8, 2, 3, 5, 10])
+
+# help(heapq)
+dir(heapq)
