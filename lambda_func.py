@@ -36,3 +36,48 @@ x2 = list(map(make_even, x1))
 print("map function in action", x2)
 
 
+## two sum 
+
+def twoSum(nums, target):
+    seen = {}
+
+    for i, num in enumerate(nums):
+        complement = target - num
+        if complement in seen:
+            return [seen[complement], i]
+        seen[num] = i
+    
+
+nums = [2, 7, 11, 15]
+target = 9
+
+print(twoSum(nums, target))
+
+for n in nums:
+    if n % 2 == 0:
+        nums.remove(n)
+print(nums)
+
+intervals = [[1, 3], [2, 6], [8, 10], [15, 18]]
+
+inter = []
+for n in intervals:
+    inter.extend(n)
+
+print(inter)
+
+def merge_intervals(intervals):
+   
+    intervals.sort(key=lambda x: x[0])
+    merged = []
+
+    for current in intervals:
+        if not merged or current[0] > merged[-1][1]:
+           merged.append(current)
+        else:
+            merged[-1][1] = max(merged[-1][1], current[1])
+    return merged
+
+data = [[1, 3], [2, 6], [8, 10], [15, 18]]
+print(merge_intervals(data))
+    
