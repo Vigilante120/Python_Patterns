@@ -108,5 +108,8 @@ print(cube)
 
 odd = list(filter(lambda x: x % 2 != 0, nums))
 # filter is like a bodygaurd this lets you only pass the items which are true and false 
-print(odd)
+print(f"{odd} is/are even")
+
+even = list(filter(lambda x: x % 2 == 0, nums))
+print(f"{even} is/are even")
 
