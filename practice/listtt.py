@@ -93,3 +93,12 @@ print(mayor_scores)
 print("Final Results")
 print(f"Winning Mayor: {winner_mayor[0]} with {winner_mayor[1]} total Points")
 print(f"Winning Counsellor: {winner_counsellor[0]} with {winner_counsellor[1]} total points")
+
+
+# mastering lambda 
+nums = [1, 2, 3, 4]
+
+# Return x squared for every x in the list
+squared = list(map(lambda x: x**2, nums))
+
+print(squared) # Output: [1, 4, 9, 16]
