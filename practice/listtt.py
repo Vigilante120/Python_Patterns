@@ -102,3 +102,11 @@ nums = [1, 2, 3, 4]
 squared = list(map(lambda x: x**2, nums))
 
 print(squared) # Output: [1, 4, 9, 16]
+
+cube = list(map(lambda x: x**3, nums))
+print(cube)
+
+odd = list(filter(lambda x: x % 2 != 0, nums))
+# filter is like a bodygaurd this lets you only pass the items which are true and false 
+print(odd)
+
