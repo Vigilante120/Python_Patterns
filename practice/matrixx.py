@@ -147,9 +147,37 @@ for i in range(n, -1, -1):
     print("*" * i)
 
 
-n = int(input("Enter a number: "))
+n = 12345
 
 while n > 0:
-    r = n % 10
-    n = n //10
-    print(r, end="",)
+    r = n % 10 
+    print(r, end="")
+    n = n // 10 # this is just a breaking statement
+
+
+print(" Checking the // symbol ")
+a = 43
+# a = a // 10
+# print(a)
+# a = a // 10
+# print(a)
+
+# base case while loop 0 pr lekr ana hai 
+# iterative case usme humne remainder
+
+while a > 0:
+    remainer = a % 10
+    print(remainer, end="")
+    # exit case 
+    a = a // 10 
+
+print("Checking %")
+b = 552
+print(b % 10)
+
+c = 1000
+
+while c > 0:
+    r = c % 10
+    print(r, end="")
+    c = c // 10
