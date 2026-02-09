@@ -181,3 +181,11 @@ while a > 0:
     r = a % 10
     print(r, end="")
     a = a // 10
+
+print("\nLIST MANIPULATION")
+fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
+
+if "apear" in fruits:
+    print(True)
+else:
+    print(False)
