@@ -175,9 +175,9 @@ print("Checking %")
 b = 552
 print(b % 10)
 
-c = 1000
-
-while c > 0:
-    r = c % 10
+print("# Reverse digits of a number")
+a = 123
+while a > 0:
+    r = a % 10
     print(r, end="")
-    c = c // 10
+    a = a // 10
