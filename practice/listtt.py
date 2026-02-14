@@ -113,3 +113,22 @@ print(f"{odd} is/are even")
 even = list(filter(lambda x: x % 2 == 0, nums))
 print(f"{even} is/are even")
 
+
+def two_sum(l1, target):
+    left, right = 0 , len(l1) - 1
+
+    while left < right:
+        curr = l1[left] + l1[right]
+        if curr == target:
+            return left, right
+        elif curr < target:
+            left += 1
+        else:
+            right -= 1
+    return []
+
+l1 = 10,20,30,40
+target = 50
+
+
+print(two_sum(l1, target))
