@@ -69,18 +69,39 @@ def attack(enemy_name):
         else:
             print(f"FAILURE! You don't have the right weapon! You need a {weakness}.")
 
-item = input("Enter the item name: ")
-loot_item(item)
 
-print("Current Inventory: ", inventory)
+print("Welcome to the Shadows. Your Mission Begins Now")
 
-item = input("Enter the item name you want to drop: ")
-drop_item(item)
+while True:
+    action = input("\nWhat will you do? (loot / drop / heal / inspect / attack / quit): ").lower()
 
-print("Current item in inventory: ", inventory)
+    if action == "quit" or action == "q":
+        print("Disappearing in the shadows. Bye")
+        break
+    
+    elif action == "loot":
+        item = input("What item do you want to loot? [hidden blade, smoke, kunai]").lower()
+        loot_item(item)
+    
+    elif action == "drop":
+        drop = input("What item you want to drop ? ").lower()
+        drop_item(drop)
+    
+    elif action == "attack":
+        enemy = input("Which enemy will you attack? ").lower()
+        attack(enemy)
+    
+    elif action == "heal":
+        try:
+            heal_item = int(input("how much do you want to heal: "))
+            heal(heal_item)
+        except:
+            ValueError("Please enter the Value in Numbers [1,2,3,4..0]")
+        
 
-heal(30)
-
-enemy_attack = input("Enter the name of enemy: ")
-
-attack(enemy_attack)
+    elif action == "inspect":
+        enemy = input("Which enemy you want to inspect? ").lower()
+        inspect_enemy(enemy)
+    
+    else:
+        print("Invalid Action. Please Choose from the list")
