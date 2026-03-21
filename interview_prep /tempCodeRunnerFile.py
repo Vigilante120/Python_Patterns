@@ -1,0 +1,2 @@
+
+print("Current Inventory: ", inventory)

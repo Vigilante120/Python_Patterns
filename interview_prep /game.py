@@ -2,6 +2,12 @@
 
 # a hidden blade , smoke bomb and kunai 
 
+player_stats = {
+    "health": 50,
+    "stamina": 50,
+    "level": 1
+}
+
 valid_items = ["hidden blade", "kunai", "smoke bomb"]
 inventory = []
 
@@ -21,6 +27,14 @@ def drop_item(item_name):
     else:
         print(f"there is no {item_name}")
 
+def heal(amount):
+    player_stats["health"] += amount
+    if player_stats["health"] > 100:
+        player_stats["health"] = 100
+    print(f"You healed! Current Health: {player_stats['health']}")
+
+
+
 item = input("Enter the item name: ")
 loot_item(item)
 
@@ -29,4 +43,6 @@ print("Current Inventory: ", inventory)
 item = input("Enter the item name you want to drop: ")
 drop_item(item)
 
-print("Dropped item: ", item)
+print("Current item in inventory: ", inventory)
+
+heal(30)
