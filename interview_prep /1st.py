@@ -71,4 +71,17 @@ i  =  1
 for loc in locations:
     print(f"Location_{i}:", loc)
     i += 1
-    
+
+
+for i in range(5, 0, -1):
+    print(i)
+
+# division is decimal by def
+print("new division")
+print(5 / 2)
+
+language = "Python"
+
+for x in language:
+    print(x, end=" ")
+
