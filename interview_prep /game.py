@@ -8,6 +8,11 @@ player_stats = {
     "level": 1
 }
 
+bestiary = {
+    "goblin": {"health": 30, "weakness": "hidden blade"},
+    "brute": {"health": 80, "weakness": "smoke bomb"}
+}
+
 valid_items = ["hidden blade", "kunai", "smoke bomb"]
 inventory = []
 
@@ -34,6 +39,14 @@ def heal(amount):
     print(f"You healed! Current Health: {player_stats['health']}")
 
 
+def inspect_enemy(enemy_name):
+    clean_name = enemy_name.lower()
+    enemy_data = bestiary.get(clean_name)
+    print(enemy_data)
+    if enemy_data is None:
+        print(f"{enemy_name} Not Found.")
+
+
 
 item = input("Enter the item name: ")
 loot_item(item)
@@ -46,3 +59,7 @@ drop_item(item)
 print("Current item in inventory: ", inventory)
 
 heal(30)
+
+enemy = input("Enter the name of the enemy: ")
+
+inspect_enemy(enemy)
