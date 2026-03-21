@@ -10,7 +10,8 @@ player_stats = {
 
 bestiary = {
     "goblin": {"health": 30, "weakness": "hidden blade"},
-    "brute": {"health": 80, "weakness": "smoke bomb"}
+    "brute": {"health": 80, "weakness": "smoke bomb"},
+    "giant": {"health": 50, "weakness": "kunai"}
 }
 
 valid_items = ["hidden blade", "kunai", "smoke bomb"]
@@ -42,6 +43,7 @@ def heal(amount):
 def inspect_enemy(enemy_name):
     clean_name = enemy_name.lower()
     enemy_data = bestiary.get(clean_name)
+
     if enemy_data is None:
         print(f"{enemy_name} Not Found.")
     else:
@@ -50,6 +52,22 @@ def inspect_enemy(enemy_name):
         print(f"Weakness: {enemy_data['weakness']}")
 
 
+# building the combat system
+
+def attack(enemy_name):
+    clean_name = enemy_name.lower()
+    enemy_data = bestiary.get(clean_name)
+
+    if enemy_data is None:
+        print(f"[-]Error {clean_name.capitalize()} is not in the bestiary.")
+    else:
+        weakness = enemy_data['weakness']
+        print(f"Enemy Weakness: {weakness}")
+
+        if weakness in inventory:
+            print(f"SUCCESS! You exploited the {clean_name.capitalize()}'s weakness with the {weakness}!")
+        else:
+            print(f"FAILURE! You don't have the right weapon! You need a {weakness}.")
 
 item = input("Enter the item name: ")
 loot_item(item)
@@ -63,6 +81,6 @@ print("Current item in inventory: ", inventory)
 
 heal(30)
 
-enemy = input("Enter the name of the enemy: ")
+enemy_attack = input("Enter the name of enemy: ")
 
-inspect_enemy(enemy)
+attack(enemy_attack)
