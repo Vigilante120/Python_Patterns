@@ -42,9 +42,12 @@ def heal(amount):
 def inspect_enemy(enemy_name):
     clean_name = enemy_name.lower()
     enemy_data = bestiary.get(clean_name)
-    print(enemy_data)
     if enemy_data is None:
         print(f"{enemy_name} Not Found.")
+    else:
+        print(f"---ENEMY: {clean_name.capitalize()}---")
+        print(f"Health: {enemy_data['health']}")
+        print(f"Weakness: {enemy_data['weakness']}")
 
 
 
