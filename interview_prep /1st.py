@@ -1,7 +1,10 @@
+
+
 # here we will prep for a job interview 
 
 # we will hunt list and dict stuff first 
 
+from collections import deque
 """
 Method A: Using zip() (Two lists)
 If you have one list for keys and another for values, zip() is the cleanest approach.
@@ -84,4 +87,42 @@ language = "Python"
 
 for x in language:
     print(x, end=" ")
+
+print()
+
+queue = deque()
+queue.append(1)
+queue.append(2)
+print(queue)
+
+
+queue.pop()
+queue.appendleft(0)
+print(queue)
+
+# hashset 
+
+mySet = { i for i in range(5) }
+print(set(mySet))
+
+# dict | hashmap 
+"""
+myMap.keys() gives only the keys.
+myMap.values() gives only the values.
+myMap.items() gives both key and value pairs.
+
+
+Functions of Dict 
+
+Read: get(), keys(), values(), items().
+Change: update(), setdefault().
+Delete: pop(), popitem(), clear().
+Copy/create: copy(), fromkeys().
+
+"""
+myMap = {}
+myMap['Alice'] = 25
+myMap['Nishant'] = 26
+print(myMap)
+
 
