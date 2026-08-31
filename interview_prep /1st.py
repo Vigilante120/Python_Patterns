@@ -5,6 +5,7 @@
 # we will hunt list and dict stuff first 
 
 from collections import deque
+import heapq
 """
 Method A: Using zip() (Two lists)
 If you have one list for keys and another for values, zip() is the cleanest approach.
@@ -125,4 +126,83 @@ myMap['Alice'] = 25
 myMap['Nishant'] = 26
 print(myMap)
 
+# looping through the dict 
 
+for key in myMap:
+    print(key, myMap[key])
+
+for val in myMap.values():
+    print(val)
+
+for key, val in myMap.items():
+    print(key, val)
+
+# tuples are like arrays but immutable
+
+"""
+helper functions 
+
+# creation
+t = (1, 2)
+t = tuple(iterable)
+
+# access
+t[i]
+
+# built-in helpers
+len(t)
+min(t)
+max(t)
+sum(t)
+
+# tuple methods
+t.count(x)
+t.index(x)
+
+# membership
+x in t
+x not in t
+
+# dictionary usage
+d[(1, 2)] = value
+
+# set usage
+s.add((1, 2))
+(1, 2) in s
+
+"""
+tup = (1, 2, 3)
+print(tup)
+if tup[0]== 1:
+    print(True)
+else:
+    print(False)
+
+
+myMap_2 = { (1,4): 3 }
+print(myMap_2[(1,4)])
+
+mySet = set()
+mySet.add((1,2))
+print((1,2) in mySet)
+
+
+s = set()
+s.add((1,2))
+print(s)
+
+
+minHeap = []
+heapq.heappush(minHeap, 3)
+heapq.heappush(minHeap, 2)
+heapq.heappush(minHeap, 4)
+
+print(minHeap[0], "\n")
+
+while len(minHeap):
+    print(heapq.heappop(minHeap))
+
+class MyClass:
+    def __init__(self, nums):
+        self.nums = nums
+        self.size = len(nums)
